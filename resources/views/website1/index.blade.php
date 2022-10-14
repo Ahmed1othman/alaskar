@@ -1,25 +1,20 @@
 @extends('layouts.website1.master')
 @section('content')
 
-
-
-
-
     <!-- Main Banner -->
     <div class="main-banner">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="banner-text">
-                        <span>Search Engine Optimization</span>
-                        <h1>We Highlight Your Business to the World Market</h1>
+                        <span> اكبر شركة للمقاولات واعمال العزل بالرياض</span>
+                        <h1>مؤسسة العسكر تقدم افضل خدمة مقابل سعر بالمملكة</h1>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusod tempor
-                            incididunt ut labore et dolore magna aliqua. Quis ipsu  msuspendisse ultrices gravida.
+                            مؤسسة العسكر هي واحدة من اكبر وافضل الشركات العاملة بالمقاولات واعمال العزل بالمملكة العربية السعودية, نستخدم افضل واحدث الاساليب والامكانيات وبأعلي جودة ممكنة.
                         </p>
 
                         <div class="banner-btn">
-                            <a href="contact.html" class="default-btn">Contact Us</a>
+                            <a href="contact.html" class="default-btn">{{__('site/app.contact_us')}}</a>
                             <a href="#" class="default-btn active">Know More</a>
                         </div>
                     </div>

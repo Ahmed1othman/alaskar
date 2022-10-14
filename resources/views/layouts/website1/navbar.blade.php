@@ -93,7 +93,7 @@
                     </ul>
 
                     <div class="menu-btn">
-                        <a href="#" class="seo-btn">SEO Score</a>
+                        <a href="#contact_us" class="seo-btn">{{__('site/app.contact_us')}}</a>
                     </div>
                 </div>
             </nav>
