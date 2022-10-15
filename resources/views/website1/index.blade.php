@@ -15,7 +15,7 @@
 
                         <div class="banner-btn">
                             <a href="contact.html" class="default-btn">{{__('site/app.contact_us')}}</a>
-                            <a href="#" class="default-btn active">Know More</a>
+                            <a href="#About_Us" class="default-btn active">{{__('site/app.about_us')}}</a>
                         </div>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
     <!-- Main Banner End -->
 
     <!-- Brand Area -->
-    <div class="brand-area brand-bg ptb-100">
+    <!-- <div class="brand-area brand-bg ptb-100">
         <div class="container">
             <div class="brand-slider owl-carousel owl-theme">
                 <div class="brand-item">
@@ -87,38 +87,27 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Brand Area End -->
 
     <!-- About Area -->
-    <div class="about-area pt-100 pb-70">
+    <div id="About_Us" class="about-area pt-100 pb-70">
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-xxl-6 ps-0">
                     <div class="about-img">
-                       <img src="{{asset('website1/img/about/1.png')}}" alt="About Images">
+                       <img src="{{asset('website1/img/about/about_1.jpg')}}" alt="About Images">
                     </div>
                 </div>
 
                 <div class="col-lg-7 col-xxl-6">
                     <div class="about-content about-width">
-                        <span>About Us</span>
-                        <h2>We Are Helping People to Reach Their Customer Since 2005</h2>
-                        <p>
-                            It is a long established fact that a reader will be distracted
-                            by the readable content of a page when looking at its layout.
-                            The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.
-                        </p>
-                        <p>
-                            As opposed to using 'Content here, content here', making it look
-                            like readable English. Many desktop publishing packages and web
-                            page editors now use Lorem Ipsum as their default model text,
-                            and a search for 'lorem ipsum' will uncover many web sites still
-                            in their infancy. Various versions have evolved over the years.
-                        </p>
-
+                        <span>{{__('site/app.about_us')}}</span>
+                        <div>
+                            {!! \Illuminate\Support\Str::limit(websiteInfo_hlp('about_us_'.app()->getLocale()),1000,"...")!!}
+                        </div>
                         <div class="about-btn">
-                            <a href="#" class="default-btn">Know More</a>
+                            <a href="#" class="default-btn">{{__('site/app.Know More')}}</a>
                         </div>
                     </div>
                 </div>
@@ -134,7 +123,7 @@
     <section class="service-area pb-70">
         <div class="container">
             <div class="section-title text-center">
-                <span>Our Service</span>
+                <span>{{__('site/app.services')}}</span>
                 <h2>We Provide Fastest & Unique Business Growing Service</h2>
                 <p>
                     It is a long established fact that a reader will be distracted by
@@ -142,101 +131,22 @@
                 </p>
             </div>
             <div class="row pt-45">
-                <div class="col-lg-4 col-sm-6">
-                    <div class="service-card">
-                        <a href="service-details.html">
-                           <img src="{{asset('website1/img/service-icon/1.png')}}" alt="Images">
-                        </a>
-                        <a href="service-details.html">
-                            <h3>SEO Optimization</h3>
-                        </a>
-                        <p>
-                            It is a long established fact that area
-                            der will be distracted by the reada
-                            ble content of a page when looking.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-sm-6">
-                    <div class="service-card">
-                        <a href="service-details.html">
-                           <img src="{{asset('website1/img/service-icon/2.png')}}" alt="Images">
-                        </a>
-                        <a href="service-details.html">
-                            <h3>Social Marketing</h3>
-                        </a>
-                        <p>
-                            It is a long established fact that area
-                            der will be distracted by the reada
-                            ble content of a page when looking.
-                        </p>
-                    </div>
-                </div>
-
+            @foreach($services as $service)
                 <div class="col-lg-4 col-sm-6">
                     <div class="service-card">
                         <a href="service-details.html">
                            <img src="{{asset('website1/img/service-icon/3.png')}}" alt="Images">
                         </a>
                         <a href="service-details.html">
-                            <h3>Content Marketing</h3>
+                            <h3>{{$service->title}}</h3>
                         </a>
                         <p>
-                            It is a long established fact that area
-                            der will be distracted by the reada
-                            ble content of a page when looking.
+                            {!!Str::limit($service->notes,200,'...')!!}
                         </p>
                     </div>
                 </div>
+            @endforeach
 
-                <div class="col-lg-4 col-sm-6">
-                    <div class="service-card">
-                        <a href="service-details.html">
-                           <img src="{{asset('website1/img/service-icon/4.png')}}" alt="Images">
-                        </a>
-                        <a href="service-details.html">
-                            <h3>Analytical Analysis</h3>
-                        </a>
-                        <p>
-                            It is a long established fact that area
-                            der will be distracted by the reada
-                            ble content of a page when looking.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-sm-6">
-                    <div class="service-card">
-                        <a href="service-details.html">
-                           <img src="{{asset('website1/img/service-icon/5.png')}}" alt="Images">
-                        </a>
-                        <a href="service-details.html">
-                            <h3>App Development</h3>
-                        </a>
-                        <p>
-                            It is a long established fact that area
-                            der will be distracted by the reada
-                            ble content of a page when looking.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-sm-6">
-                    <div class="service-card">
-                        <a href="service-details.html">
-                           <img src="{{asset('website1/img/service-icon/6.png')}}" alt="Images">
-                        </a>
-                        <a href="service-details.html">
-                            <h3>Web Development</h3>
-                        </a>
-                        <p>
-                            It is a long established fact that area
-                            der will be distracted by the reada
-                            ble content of a page when looking.
-                        </p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
