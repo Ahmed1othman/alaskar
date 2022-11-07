@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
        User::create([
            'name' => 'alaskar Admin'
            ,'email' => 'admin@alaskar.com'
-           ,'password' => Hash::make('$i7@d_2022')
+           ,'password' => Hash::make('@l@$k@r_2022')
        ]);
     }
 }

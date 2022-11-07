@@ -10,17 +10,24 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="footer-single">
                         <div class="footer-single-content">
-                            <a href="index.html">
-                                <img src="{{asset('website1/img/footer-logo.png')}}" alt="Logo">
-                            </a>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur convallis arcu, id dapibus nulla tincidunt.</p>
+                            @if (websiteInfo_hlp('logo_'.App::getLocale()) && websiteInfo_hlp('show_logo'))
+                                <img style="border-radius: 10%; max-width: 110px; max-height: 60px" src="{{ asset('storage/front/' . websiteInfo_hlp('logo_'.App::getLocale())) }}"
+                                    alt="{{ websiteInfo_hlp('website_name_'.App::getLocale()) }}">
+                            @else
+                                <div class="one">
+                                    <h1>{{websiteInfo_hlp('website_name_'.App::getLocale())}}</h1>
+                                </div>
+                            @endif
+                            <p>
+                                {{websiteInfo_hlp('footer_pragraph_'.App::getLocale())}}
+                            </p>
                         </div>
 
                         <div class="newsletter-area">
                             <form class="newsletter-form" data-toggle="validator" method="POST">
-                                <input type="email" class="form-control" placeholder="Email" name="EMAIL" required autocomplete="off">
-                                <button class="subscribe-btn" type="submit">
-                                    Subscribe
+                                <input type="email" class="form-control" placeholder="{{__('site/app.your_email')}}" name="email" required autocomplete="off">
+                                <button  onclick="submitSubscription()" class="subscribe-btn" type="submit">
+                                    {{__('site/app.Subscribe')}}
                                 </button>
                                 <div id="validator-newsletter" class="form-result"></div>
                             </form>
@@ -30,31 +37,14 @@
 
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-list ml-50">
-                        <h3>Services</h3>
+                        <h3>{{ __('site/app.services') }}</h3>
                         <ul>
+                            @foreach ( $services as $Service )
+
+                            @endforeach
                             <li>
                                 <i class='bx bxs-chevron-right'></i>
-                                <a href="services.html">SEO Optimization</a>
-                            </li>
-                            <li>
-                                <i class='bx bxs-chevron-right'></i>
-                                <a href="services.html">Social Marketing</a>
-                            </li>
-                            <li>
-                                <i class='bx bxs-chevron-right'></i>
-                                <a href="services.html">Busines Growing</a>
-                            </li>
-                            <li>
-                                <i class='bx bxs-chevron-right'></i>
-                                <a href="services.html"> Data Analysis</a>
-                            </li>
-                            <li>
-                                <i class='bx bxs-chevron-right'></i>
-                                <a href="services.html">App Development </a>
-                            </li>
-                            <li>
-                                <i class='bx bxs-chevron-right'></i>
-                                <a href="services.html"> Web Development</a>
+                                <a href="services.html">{{$Service->title}}</a>
                             </li>
                         </ul>
                     </div>
@@ -62,60 +52,46 @@
 
                 <div class="col-lg-2 col-md-6">
                     <div class="footer-list">
-                        <h3>Quick Links</h3>
+                        <h3>{{ __('site/app.Quick Links') }}</h3>
                         <ul>
+                            @foreach (navbar_hlp() as $item)
                             <li>
                                 <i class='bx bxs-chevron-right'></i>
-                                <a href="index.html">Home</a>
+                                <a href="{{ route($item->route) }}">
+                                    {{ __('site/app.'.$item->title) }}
+                                </a>
                             </li>
-                            <li>
-                                <i class='bx bxs-chevron-right'></i>
-                                <a href="services.html">Service</a>
-                            </li>
-                            <li>
-                                <i class='bx bxs-chevron-right'></i>
-                                <a href="about.html">About Us</a>
-                            </li>
-                            <li>
-                                <i class='bx bxs-chevron-right'></i>
-                                <a href="testimonial.html">Testimonial</a>
-                            </li>
-                            <li>
-                                <i class='bx bxs-chevron-right'></i>
-                                <a href="blog.html">Blog</a>
-                            </li>
-                            <li>
-                                <i class='bx bxs-chevron-right'></i>
-                                <a href="contact.html">Contact</a>
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
 
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-list ml-20">
-                        <h3>Contact Us</h3>
+                        <h3>{{trans('site/app.contact_us')}}</h3>
                         <ul>
+                            @if(websiteInfo_hlp('phone'))
+                                <li>
+                                    <i class='bx bxs-chevron-right'></i>
+                                    <a href="tel:{{websiteInfo_hlp('phone')}}">{{websiteInfo_hlp('phone')}}</a>
+                                </li>
+                            @endif
+
+                            @if(websiteInfo_hlp('email'))
+                                <li>
+                                    <i class='bx bxs-chevron-right'>{{websiteInfo_hlp('email')}}</i>
+                                    <a href="mailto:{{websiteInfo_hlp('email')}}"></a>
+                                </li>
+                            @endif
+
+                            @if(websiteInfo_hlp('address'))
                             <li>
                                 <i class='bx bxs-chevron-right'></i>
-                                <a href="tel:+1123456789">+1  1234 56 789</a>
+                                {{websiteInfo_hlp('address')}}
                             </li>
-                            <li>
-                                <i class='bx bxs-chevron-right'></i>
-                                <a href="tel:+19876543210">+1  9876 543 210</a>
-                            </li>
-                            <li>
-                                <i class='bx bxs-chevron-right'></i>
-                                <a href="mailto:email@bonsa.com">email@bonsa.com</a>
-                            </li>
-                            <li>
-                                <i class='bx bxs-chevron-right'></i>
-                                <a href="mailto:hello@bonsa.com">hello@bonsa.com</a>
-                            </li>
-                            <li>
-                                <i class='bx bxs-chevron-right'></i>
-                                28/A Street, New York, USA
-                            </li>
+                            @endif
+
+
                         </ul>
                     </div>
                 </div>
@@ -129,7 +105,13 @@
                 <div class="col-lg-12">
                     <div class="bottom-text text-center">
                         <p>
-                            Copyright ©2021 Bonsa All Rights Reserved, Share By <a href="https://nullphpscript.com.com/" target="_blank">HTML Templates</a>
+                            {{-- جميع الحقوق محفوظة لمؤسسة العسكر للمقاولات واعمال العزل ©{{date('Y')}} --}}
+                            @if(App::getLocale()=='en')
+                Copyright @ {{ date('Y') }} For <span class="h5"><a href="{{route('home')}}">{{websiteInfo_hlp('website_name_en')}}</a> </span>. All rights reserved.
+                @else
+                    جميع الحقوق محفوظة لـ <span class="h5"><a href="{{route('home')}}">{{websiteInfo_hlp('website_name_ar')}}</a> </span> © {{date('Y')}}
+                @endif
+
                         </p>
                     </div>
                 </div>

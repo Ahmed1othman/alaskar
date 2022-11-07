@@ -37,9 +37,9 @@
 
                     <div class="row">
                         <div class="col">
-                            <label class="mb-2">{{trans('admin/news.new_notes')}}</label>
-                            <textarea class="form-control  @error('notes') is-invalid @enderror ckeditor" rows="5" name="notes" required> {{old('notes')}} </textarea>
-                            @error('notes')
+                            <label class="mb-2">{{trans('admin/news.new_content')}}</label>
+                            <textarea class="form-control ckeditor @error('content') is-invalid @enderror ckeditor" rows="5" name="content" required> {{old('content')}} </textarea>
+                            @error('content')
                             <div class="alert alert-danger">{{$message}}</div>
                             @enderror
                         </div>
@@ -48,9 +48,9 @@
                     <br>
                     <div class="row">
                         <div class="col">
-                            <label class="mb-2">{{trans('admin/news.new_notes_ar')}}</label>
-                            <textarea class="form-control  @error('notes_ar') is-invalid @enderror ckeditor" rows="5" name="notes_ar" required> {{old('notes_ar')}} </textarea>
-                            @error('notes_ar')
+                            <label class="mb-2">{{trans('admin/news.new_content_ar')}}</label>
+                            <textarea class="form-control ckeditor @error('content_ar') is-invalid @enderror ckeditor" rows="5" name="content_ar" required> {{old('content_ar')}} </textarea>
+                            @error('content_ar')
                             <div class="alert alert-danger">{{$message}}</div>
                             @enderror
                         </div>
@@ -74,6 +74,27 @@
                     </div>
 
 
+
+                    <br>
+                    <div class="row">
+
+                        <div class="col">
+                            <label class="mb-2">{{trans('admin/news.tag')}}</label>
+                            <input type="text" name="tags" class="form-control  @error('tag') is-invalid @enderror" required value="{{old('tag')}}">
+                            @error('tag')
+                            <div class="alert alert-danger">{{$message}}</div>
+                            @enderror
+                        </div>
+
+                        <div class="col">
+                            <label class="mb-2">{{trans('admin/news.tag_ar')}}</label>
+                            <input type="text" name="tags_ar" class="form-control  @error('tag_ar') is-invalid @enderror" required value="{{old('tag_ar')}}">
+                            @error('tag_ar')
+                            <div class="alert alert-danger">{{$message}}</div>
+                            @enderror
+                        </div>
+
+                    </div>
                     <br>
 
                     <div class="row">

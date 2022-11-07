@@ -40,19 +40,40 @@
 
                     <div class="row">
                         <div class="col">
-                            <label class="mb-2">{{ trans('admin/news.new_notes') }}</label>
-                            <textarea class="form-control ckeditor" rows="5" name="notes"> {{ $data->getTranslation('notes', 'en') }} </textarea>
+                            <label class="mb-2">{{ trans('admin/news.new_content') }}</label>
+                           <textarea class="form-control ckeditor" rows="5" name="content"> {{ $data->getTranslation('content', 'en') }} </textarea>
                         </div>
                     </div>
 
                     <br>
                     <div class="row">
                         <div class="col">
-                            <label class="mb-2">{{ trans('admin/news.new_notes_ar') }}</label>
-                            <textarea class="form-control ckeditor" rows="5" name="notes_ar"> {{ $data->getTranslation('notes', 'ar') }} </textarea>
+                            <label class="mb-2">{{ trans('admin/news.new_content_ar') }}</label>
+                           <textarea class="form-control ckeditor" rows="5" name="content_ar"> {{ $data->getTranslation('content', 'ar') }} </textarea>
                         </div>
                     </div>
 
+
+                    <br>
+                    <div class="row">
+
+                        <div class="col">
+                            <label class="mb-2">{{trans('admin/news.tag')}}</label>
+                            <input type="text" name="tags" class="form-control  @error('tag') is-invalid @enderror" required value="{{ $data->getTranslation('tags', 'en') }}"">
+                            @error('tag')
+                            <div class="alert alert-danger">{{$message}}</div>
+                            @enderror
+                        </div>
+
+                        <div class="col">
+                            <label class="mb-2">{{trans('admin/news.tag_ar')}}</label>
+                            <input type="text" name="tags_ar" class="form-control  @error('tag_ar') is-invalid @enderror" required value="{{ $data->getTranslation('tags', 'ar') }}">
+                            @error('tag_ar')
+                            <div class="alert alert-danger">{{$message}}</div>
+                            @enderror
+                        </div>
+
+                    </div>
 
                     <br>
 

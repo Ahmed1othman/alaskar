@@ -12,14 +12,15 @@ class news extends Model
     use HasFactory;
     use SoftDeletes;
 
-    
+
     use HasTranslations;
 
-    public $translatable = ['title','notes'];
+    public $translatable = ['title','content','tags'];
 
     protected $fillable = [
         'title',
-        'notes',
+        'content',
+        'tags',
         'photo',
         'active',
     ];

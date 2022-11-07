@@ -53,7 +53,8 @@ class newsController extends Controller
         try {
             $data = [
                 'title' => ['en' => $request->title, 'ar' => $request->title_ar],
-                'notes' => ['en' => $request->notes, 'ar' => $request->notes_ar]
+                'content' => ['en' => $request->content, 'ar' => $request->content_ar],
+                'tags' => ['en' => $request->tags, 'ar' => $request->tags_ar]
             ];
             if ($request->active) {
                 $data['active'] = 1;
@@ -116,7 +117,9 @@ class newsController extends Controller
         try {
             $data = [
                 'title' => ['en' => $request->title, 'ar' => $request->title_ar],
-                'notes' => ['en' => $request->notes, 'ar' => $request->notes_ar]
+                'content' => ['en' => $request->content, 'ar' => $request->content_ar],
+                'tags' => ['en' => $request->tags, 'ar' => $request->tags_ar]
+
             ];
             if ($request->active) {
                 $data['active'] = 1;

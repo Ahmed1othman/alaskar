@@ -11,6 +11,7 @@ use App\Models\news;
 use App\Models\order;
 use App\Models\project;
 use App\Models\Service;
+use App\Models\Testimonial;
 use App\Models\SliderOption;
 use App\Models\Slider;
 use App\Models\Subscription;
@@ -49,6 +50,7 @@ class HomeController extends Controller
             'features' => feature::whereActive(1)->orderByDesc('id')->limit(3)->get(),
             'projects' => project::whereActive(1)->orderByDesc('id')->limit(3)->get(),
             'news' => news::whereActive(1)->orderByDesc('id')->limit(3)->get(),
+            'testimonials' => Testimonial::whereActive(1)->orderByDesc('id')->limit(3)->get(),
         ];
 
         $this->seo()->setTitle('الصفحة الرئيسية');

@@ -125,11 +125,11 @@ body {
 }
 
 .faq-content {
-    margin-right: 30px;
+    /* margin-right: 30px; */
     margin-left: unset;
 }
 .faq-accordion {
-    margin-right: unset;
+    /* margin-right: unset; */
     margin-left: auto;
 }
 .faq-accordion .accordion .accordion-title i {
@@ -139,7 +139,7 @@ body {
 .faq-accordion .accordion .accordion-title {
     padding: 20px 25px 17px 60px;
 }
-.portfolio-item .portfolio-content { 
+.portfolio-item .portfolio-content {
     left: auto;
     right: 25px;
 }
@@ -334,11 +334,11 @@ Responsive CSS
         margin-right: auto;
     }
     .faq-content {
-        max-width: 540px;
+        /* max-width: 540px; */
         margin: auto;
     }
     .faq-accordion {
-        max-width: 540px;
+        max-width: 1080px;
         margin-right: auto;
     }
     .offset-sm-3 {
@@ -442,13 +442,13 @@ Responsive CSS
 @media only screen and (min-width : 1200px) and (max-width : 1349px){
     .container{
         max-width: 1170px !important;
-    } 
+    }
     .blog-card .blog-content .blog-tag {
         right: 20px;
         left: auto;
     }
 }
 
-@media only screen and (min-width : 1800px) { 
+@media only screen and (min-width : 1800px) {
 
 }

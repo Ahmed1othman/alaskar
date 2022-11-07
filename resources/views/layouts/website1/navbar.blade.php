@@ -4,13 +4,11 @@
         text-transform: uppercase;
         font-size: 26px;
         font-weight: bold;
+        font-family: 'IBM Plex Sans Arabic', sans-serif;
         color: {{ websiteInfo_hlp('main_color')}};
-        font-family: Sans-Seri;
         width: 90%;
         display: inline-block;
         vertical-align: middle;
-
-        text-shadow: 0px 2px 2px #b3b3b3;
     }
 
     .fix-menu-desktop .wrap-menu-desktop{
@@ -28,7 +26,7 @@
     <div class="mobile-nav">
         <a href="{{ route('home') }}" class="logo">
             @if (websiteInfo_hlp('logo_'.App::getLocale()) && websiteInfo_hlp('show_logo'))
-                <img style="max-width: 110px; max-height: 60px" src="{{ asset('storage/front/' . websiteInfo_hlp('logo_'.App::getLocale())) }}"
+                <img style="max-width: 110px; max-height: 60px; border-radius: 10%" src="{{ asset('storage/front/' . websiteInfo_hlp('logo_'.App::getLocale())) }}"
                      alt="{{ websiteInfo_hlp('website_name_'.App::getLocale()) }}">
             @else
                 <div class="one">
@@ -39,12 +37,12 @@
     </div>
 
     <!-- Menu For Desktop Device -->
-    <div class="main-nav">
+    <div class="main-nav top-nav">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light ">
                 <a class="navbar-brand" href="{{ route('home') }}">
                     @if (websiteInfo_hlp('logo_'.App::getLocale()) && websiteInfo_hlp('show_logo'))
-                        <img style="max-width: 110px; max-height: 60px" src="{{ asset('storage/front/' . websiteInfo_hlp('logo_'.App::getLocale())) }}"
+                        <img style="max-width: 110px; max-height: 60px;border-radius: 10%" src="{{ asset('storage/front/' . websiteInfo_hlp('logo_'.App::getLocale())) }}"
                              alt="{{ websiteInfo_hlp('website_name_'.App::getLocale()) }}" >
                     @else
 
@@ -55,12 +53,12 @@
                 </a>
                 <a class="navbar-brand-sticky" href="{{ route('home') }}">
                     @if (websiteInfo_hlp('logo_'.App::getLocale()) && websiteInfo_hlp('show_logo'))
-                        <img style="max-width: 110px; max-height: 60px" src="{{ asset('storage/front/' . websiteInfo_hlp('logo_'.App::getLocale())) }}"
+                        <img style="max-width: 110px; max-height: 60px;border-radius: 10%" src="{{ asset('storage/front/' . websiteInfo_hlp('logo_'.App::getLocale())) }}"
                              alt="{{ websiteInfo_hlp('website_name_'.App::getLocale()) }}" >
                     @else
 
                         <div class="one">
-                            <h1>{{websiteInfo_hlp('website_name_'.App::getLocale())}}</h1>
+                            <h1 style="color: {{ websiteInfo_hlp('secondary_font_color')}};">{{websiteInfo_hlp('website_name_'.App::getLocale())}}</h1>
                         </div>
                     @endif
                 </a>

@@ -30,7 +30,6 @@
                                 <img style="height: 100px;width: 120px;"
                                     src="{{ asset('storage/front/'.$row->value ) }}">
                                 @endif
-
                             </div>
                         </div>
                         <div class="col-xl-6">
@@ -50,6 +49,14 @@
                         <div class="col-xl-8">
                             <div class="form-group">
                                 <input type="file" class="form-control" name="value" accept="application/pdf">
+                            </div>
+                        </div>
+                        @elseif ($row->type=='number')
+                        <div class="col-xl-4">
+                            <div class="form-group">
+                                <input type="number" class="form-control" name="value" required
+                                placeholder="{{__('admin/app.'.$row->option)}}"
+                                value="{{ old('value', $row->value)}}">
                             </div>
                         </div>
 
@@ -73,7 +80,7 @@
                         @elseif ($row->type=='text')
                         <div class="col-xl-8">
                             <div class="form-group">
-                                <textarea id="{{ $row->option }}" name="value" class="form-control ckeditor" rows="3" placeholder="{{__('admin/app.about_us')}}">{{ $row->value }}</textarea>
+                                <textarea id="{{ $row->option }}" name="value" class="form-control" rows="6" placeholder="{{__('admin/app.about_us')}}">{{ $row->value }}</textarea>
                             </div>
                         </div>
                         @endif

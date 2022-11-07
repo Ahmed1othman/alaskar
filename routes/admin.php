@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\newsController;
 use App\Http\Controllers\Admin\PageSectionController;
 use App\Http\Controllers\Admin\ProjectsController;
 use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\SubscriptionController;
 use Illuminate\Support\Facades\Route;
@@ -50,6 +51,13 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['au
     Route::resource('Services', ServiceController::class);
     Route::get('deleted-at', [ServiceController::class,'deleted'])->name('services-deleted');
     ###################### End Routes resource Services ######################
+
+    ###################### Start Routes resource Testimonials ######################
+    Route::resource('Testimonials', TestimonialController::class);
+    Route::get('deleted-testimonials', [TestimonialController::class,'deleted'])->name('Testimonials-deleted');
+    ###################### End Routes resource Services ######################
+
+
 
 
     ###################### Start Routes Restore  ######################

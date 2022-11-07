@@ -30,6 +30,8 @@
             <ul>
                 <li><a href="{{ route('Services.index') }}"><i class="bx bx-right-arrow-alt"></i>{{ __('admin/app.services') }}</a></li>
 
+                <li><a href="{{ route('Testimonials.index') }}"><i class="bx bx-right-arrow-alt"></i>{{ __('admin/app.testimonials') }}</a></li>
+
                 <li><a href="{{ route('features.index') }}"><i class="bx bx-right-arrow-alt"></i>{{ __('admin/app.features') }}</a></li>
 
                 <li><a href="{{ route('AllOrders') }}"><i class="bx bx-right-arrow-alt"></i>{{ __('admin/app.orders') }}</a></li>

@@ -220,7 +220,7 @@
     margin: 0 auto;
     width: 100%;
     font-size: 15px;
-    padding: 8px 25px;
+    /* padding: 8px 25px; */
   }
   .tabs-item-list ul li a {
     padding: 8px 40px;
@@ -686,11 +686,11 @@
     display: none;
   }
   .faq-content {
-    max-width: 540px;
+    /* max-width: 540px; */
     margin: auto;
   }
   .faq-accordion {
-    max-width: 540px;
+    max-width: 1080px;
     margin-left: auto;
   }
   .faq-accordion .accordion .accordion-title {
@@ -994,7 +994,7 @@
     text-align: center;
     margin: 0 auto;
     width: 100%;
-    padding: 8px 30px;
+    /* padding: 8px 30px; */
     font-size: 16px;
   }
   .tabs-item-list ul li a {

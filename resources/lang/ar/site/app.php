@@ -35,8 +35,17 @@ return [
     'Email' => 'البريد الالكتروني',
     'Your Name' => 'اسمك',
     'Submit' => 'ارسال',
-    'About_Us' => 'من نحن',
+    'read_more' => 'اقرأ المزيد',
     'about_us' => 'من نحن',
+
+
+
+    'our_services'=> 'خدماتنا',
+    'our_clients_feedback' => 'أراء عملائنا',
+    'our_news_offers' => 'اخر اخبارنا وعروضنا',
+    'Quick Links' => 'روابط سريعة',
+    'about_us' => 'من نحن',
+    'enter_your_mail' => 'ادخل بريدك الالكتروني',
     'Phone Number' => 'رقم الهاتف',
 
     'Subscribe' => 'اشترك الان',
@@ -49,5 +58,11 @@ return [
     'services_details' => 'تفاصيل الخدمات',
     'projects_details' => 'تفاصيل المشاريع',
     'Know More'=>'اعرف المزيد',
- 
+    'experiance_years'=>'عدد سنوات الخبرة لدينا',
+    'projects_number'=>'عدد سابقات الاعمال',
+    'clients_number'=>'عدد عملائنا الكرام',
+    'employees_number'=>'عدد الموضفين والعاملين لدينا',
+
+
+
 ];

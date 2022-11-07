@@ -32,8 +32,10 @@ class NewsRequest extends FormRequest
                     return [
                         'title' => 'required|string|min:2|max:150|unique:news,title->en'. $this->id,
                         'title_ar' => 'required|string|min:2|max:150|unique:news,title->ar'. $this->id,
-                        'notes' => 'required|string|min:2|unique:news,notes->en' . $this->id,
-                        'notes_ar' => 'required|string|min:2|unique:news,notes->ar' . $this->id,
+                        'tags' => 'required|string|min:2|max:150|unique:news,tags->en'. $this->id,
+                        'tags_ar' => 'required|string|min:2|max:150|unique:news,tags->ar'. $this->id,
+                        'content' => 'required|string|min:2|unique:news,content->en' . $this->id,
+                        'content_ar' => 'required|string|min:2|unique:news,content->ar' . $this->id,
                         'photo' => 'required|image|mimes:jpeg,bmp,png,jpg|max:4096'
                     ];
                 }
@@ -42,8 +44,10 @@ class NewsRequest extends FormRequest
                     return [
                         'title' => 'required|string|min:2|max:150|unique:news,title->en' . $this->id,
                         'title_ar' => 'required|string|min:2|max:150|unique:news,title->ar' . $this->id,
-                        'notes' => 'required|string|min:2|unique:news,notes->en' .$this->id,
-                        'notes_ar' => 'required|string|min:2|unique:news,notes->ar' . $this->id,
+                        'tags' => 'required|string|min:2|max:150|unique:news,tags->en'. $this->id,
+                        'tags_ar' => 'required|string|min:2|max:150|unique:news,tags->ar'. $this->id,
+                        'content' => 'required|string|min:2|unique:news,content->en' .$this->id,
+                        'content_ar' => 'required|string|min:2|unique:news,content->ar' . $this->id,
                         'photo' => 'sometimes|image|mimes:jpeg,bmp,png,jpg|max:4096'
                     ];
                 }
@@ -73,18 +77,34 @@ class NewsRequest extends FormRequest
             'title_ar.unique' => __('validation.unique'),
 
 
-            'notes.required' => __('validation.required'),
-            'notes.string' => __('validation.string'),
-            'notes.min' => __('validation.min'),
-            'notes.regex' => __('validation.regex'),
-            'notes.unique' => __('validation.unique'),
+            'tags.required' => __('validation.required'),
+            'tags.string' => __('validation.string'),
+            'tags.min' => __('validation.min'),
+            'tags.max' => __('validation.max'),
+            'tags.regex' => __('validation.regex'),
+            'tags.unique' => __('validation.unique'),
 
 
-            'notes_ar.required' => __('validation.required'),
-            'notes_ar.string' => __('validation.string'),
-            'notes_ar.min' => __('validation.min'),
-            'notes_ar.regex' => __('validation.regex'),
-            'notes_ar.unique' => __('validation.unique'),
+            'tags_ar.required' => __('validation.required'),
+            'tags_ar.string' => __('validation.string'),
+            'tags_ar.min' => __('validation.min'),
+            'tags_ar.max' => __('validation.max'),
+            'tags_ar.regex' => __('validation.regex'),
+            'tags_ar.unique' => __('validation.unique'),
+
+
+            'content.required' => __('validation.required'),
+            'content.string' => __('validation.string'),
+            'content.min' => __('validation.min'),
+            'content.regex' => __('validation.regex'),
+            'content.unique' => __('validation.unique'),
+
+
+            'content_ar.required' => __('validation.required'),
+            'content_ar.string' => __('validation.string'),
+            'content_ar.min' => __('validation.min'),
+            'content_ar.regex' => __('validation.regex'),
+            'content_ar.unique' => __('validation.unique'),
 
 
             'photo.required' => __('validation.required'),

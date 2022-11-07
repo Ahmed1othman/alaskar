@@ -1034,9 +1034,9 @@ Faq Area
     }
 }
 .faq-content {
-    max-width: 570px;
+    // max-width: 570px;
     margin-right: auto;
-    margin-left: 30px;
+    // margin-left: 30px;
     span {
         color: $main-color;
         font-weight: 500;
@@ -1053,7 +1053,7 @@ Faq Area
     }
 }
 .faq-accordion {
-    max-width: 470px;
+    max-width: 1080px;
     margin-right: auto;
     margin-bottom: 30px;
     margin-left: 30px;

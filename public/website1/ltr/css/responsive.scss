@@ -78,7 +78,7 @@
         p {
             margin-bottom: 20px;
         }
-    } 
+    }
     .banner-shape-1 {
         display: none;
     }
@@ -169,7 +169,7 @@
             .accordion-item {
                 border-radius: 30px;
             }
-            .accordion-title { 
+            .accordion-title {
                 font-size: 16px;
                 padding: 10px 60px 10px 25px;
                 i {
@@ -183,7 +183,7 @@
             .accordion-content {
                 padding-bottom: 10px;
             }
-        } 
+        }
     }
     .portfolio-mt {
         margin-top: 0;
@@ -254,7 +254,7 @@
             padding: 8px 25px;
         }
     }
-    
+
     .tabs-item-list {
         ul {
             li {
@@ -265,7 +265,7 @@
             }
         }
     }
-    
+
     #prices-content {
         margin-top: 30px;
     }
@@ -497,13 +497,13 @@
             }
         }
     }
-    
+
     .about-area {
         .pl-0, .px-0 {
             padding-left: 15px !important;
         }
     }
-    
+
     .about-img-2 {
         margin-top: 80px;
         margin-bottom: 30px;
@@ -523,7 +523,7 @@
                display: none;
             }
         }
-    } 
+    }
 
     .member-shape-2 {
        display: none;
@@ -537,7 +537,7 @@
 
     .service-area {
         position: relative;
-        .owl-nav { 
+        .owl-nav {
             margin-bottom: 50px;
             .owl-prev {
                 position: absolute;
@@ -788,7 +788,7 @@
             margin-bottom: 15px;
         }
     }
-    
+
     /* Error Area */
     .error-area {
         padding: 110px 15px 100px 15px;
@@ -810,7 +810,7 @@
             width: 100%;
         }
     }
-   
+
     .login-social-btn {
         font-size: 20px;
         width: 100%;
@@ -850,11 +850,11 @@
     }
 
     .faq-content {
-        max-width: 540px;
+        // max-width: 1080px;
         margin: auto;
     }
     .faq-accordion {
-        max-width: 540px;
+        max-width: 1080px;
         margin-left: auto;
         .accordion {
             .accordion-title {
@@ -888,10 +888,10 @@
     .blog-card {
         .blog-content {
             width: 75%;
-            border-radius: 15px; 
+            border-radius: 15px;
         }
     }
-    
+
     .footer-single {
         .footer-single-content {
             p {
@@ -928,7 +928,7 @@
         .container-fluid {
             max-width: 540px;
         }
-    } 
+    }
 
     .subscribe-area {
         .subscribe-content {
@@ -937,7 +937,7 @@
             }
         }
     }
-     
+
     .footer-single-2 {
         .footer-single-content-2 {
             p {
@@ -966,8 +966,8 @@
         }
     }
 
-    
-     
+
+
 }
 
 @media only screen and (min-width : 768px) and (max-width : 991px) {
@@ -1055,7 +1055,7 @@
         p {
             margin-bottom: 20px;
         }
-    } 
+    }
     .banner-shape-1 {
         display: none;
     }
@@ -1162,7 +1162,7 @@
             .accordion-item {
                 border-radius: 30px;
             }
-            .accordion-title { 
+            .accordion-title {
                 font-size: 16px;
                 padding: 10px 60px 10px 25px;
                 i {
@@ -1176,7 +1176,7 @@
             .accordion-content {
                 padding-bottom: 10px;
             }
-        } 
+        }
     }
 
     .portfolio-mt {
@@ -1192,7 +1192,7 @@
             }
         }
     }
-  
+
     .portfolio-item {
         .portfolio-content {
             h3 {
@@ -1200,7 +1200,7 @@
             }
             i {
                 margin-top: 1px;
-            }     
+            }
         }
     }
 
@@ -1443,7 +1443,7 @@
             }
         }
     }
-     
+
     .banner-into {
         padding-top: 125px;
         padding-bottom: 125px;
@@ -1516,7 +1516,7 @@
             }
         }
     }
-    
+
     .member-shape-2 {
         display: none;
     }
@@ -1612,7 +1612,7 @@
             padding: 10px 45px;
         }
     }
-    
+
 }
 
 @media only screen and (min-width : 992px) and (max-width : 1199px) {
@@ -1664,7 +1664,7 @@
             }
         }
     }
-       
+
     .testimonial-img img {
         margin-top: 0;
         height: auto;
@@ -1696,7 +1696,7 @@
         }
     }
     /* Home Page One End */
-    
+
     /* Home Page two */
     .about-img-2 {
         .about-man {
@@ -1852,7 +1852,7 @@
             height: 970px;
         }
     }
-     
+
     .about-ml {
         margin-bottom: 30px;
         margin-left: 100px;
@@ -1864,7 +1864,7 @@
 @media only screen and (min-width : 1200px) and (max-width : 1349px){
     .container{
         max-width: 1170px !important;
-    } 
+    }
     .blog-card {
         .blog-content {
             width: 95%;
@@ -1880,7 +1880,7 @@
 @media only screen and (min-width : 1350px) and (max-width : 1699px) {
     .container{
         max-width: 1320px !important;
-    } 
+    }
     .banner-text {
         max-width: 630px;
         h1 {
@@ -1899,7 +1899,7 @@
     .head-width {
         max-width: 520px;
     }
-    
+
     .banner-img-2 {
         img {
             width: 100%;
@@ -1920,7 +1920,7 @@
 @media only screen and (min-width : 1700px) {
     .container{
         max-width: 1440px !important;
-    } 
+    }
     .banner-text {
         max-width: 690px;
         h1 {
@@ -1932,7 +1932,7 @@
             font-size: 65px;
         }
     }
-    
+
     .banner-img-2 {
         img {
             width: 100%;

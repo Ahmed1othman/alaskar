@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use App\Http\Controllers\effects;
 use Spatie\Sitemap\SitemapGenerator;
+use App\Models\Service;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,8 @@ use Spatie\Sitemap\SitemapGenerator;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+$this->theme = 'website1';
 
 require __DIR__ . '/auth.php';
 
@@ -35,14 +38,23 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
 
     ################## Start Route Get about-us ###########################
     Route::get('/about-us', function () {
-        return view('website.about-us');
+        $date = [
+            // 'slideroption' => $slideroption,
+            'services' => Service::whereActive(1)->orderByDesc('id')->limit(3)->get(),
+            // 'sliders' => Slider::whereActive(1)->orderByDesc('id')->limit(3)->get(),
+            // 'features' => feature::whereActive(1)->orderByDesc('id')->limit(3)->get(),
+            // 'projects' => project::whereActive(1)->orderByDesc('id')->limit(3)->get(),
+            // 'news' => news::whereActive(1)->orderByDesc('id')->limit(3)->get(),
+            // 'testimonials' => Testimonial::whereActive(1)->orderByDesc('id')->limit(3)->get(),
+        ];
+        return view($this->theme.'.about-us',$date);
     })->name('aboutus');
     ################## End Route Get about-us ###########################
 
 
     ################## Start Route Get contact-us ###########################
     Route::get('/contact-us', function () {
-        return view('website.contact-us');
+        return view($this->theme.'.contact-us');
     })->name('contactus');
     ################## End Route Get contact-us ###########################
 

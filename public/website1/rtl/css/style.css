@@ -1147,9 +1147,9 @@ Faq Area
 }
 
 .faq-content {
-  max-width: 570px;
+  /* max-width: 570px; */
   margin-right: auto;
-  margin-left: 30px;
+  /* margin-left: 30px; */
 }
 
 .faq-content span {
@@ -1170,7 +1170,7 @@ Faq Area
 }
 
 .faq-accordion {
-  max-width: 470px;
+  max-width: 1080px;
   margin-right: auto;
   margin-bottom: 30px;
   margin-left: 30px;
@@ -1497,7 +1497,7 @@ Submission Area
   margin-top: 8px;
   float: right;
   margin-right: 10px;
-  padding: 12px 50px;
+  /* padding: 12px 50px; */
   font-size: 18px;
 }
 
@@ -2139,7 +2139,7 @@ Footer Section
   left: 0;
   position: absolute;
   background: #ffffff;
-  height: 20%;
+  /* height: 20%; */
   top: -70px;
   -webkit-transform: skewY(175deg);
           transform: skewY(175deg);

@@ -1,6 +1,6 @@
 @extends('layouts.admin.master')
-@section('title')
-    {{trans('admin/services.Add_new_Service')}}
+@section('name')
+    {{trans('admin/testimonials.Add_new_Testimonial')}}
 @endsection
 @section('content')
     <div class="page-wrapper">
@@ -8,66 +8,45 @@
             @include('message')
             <div class="card">
                 <div class="card-body">
-                    <form action="{{route('Services.store')}}" method="post" autocomplete="off"
+                    <form action="{{route('Testimonials.store')}}" method="post" autocomplete="off"
                           enctype="multipart/form-data">
                         @csrf
 
                         <div class="row">
 
                             <div class="col">
-                                <label class="mb-2">{{trans('admin/services.Service_name')}}</label>
-                                <input type="text" name="title"
-                                       class="form-control  @error('title') is-invalid @enderror" required
-                                       value="{{old('title')}}">
-                                @error('title')
-                                <div class="alert alert-danger">{{$message}}</div>
-                                @enderror
-                            </div>
-
-                            <div class="col">
-                                <label class="mb-2">{{trans('admin/services.Service_name_ar')}}</label>
-                                <input type="text" name="title_ar"
-                                       class="form-control  @error('title_ar') is-invalid @enderror" required
-                                       value="{{old('title_ar')}}">
-                                @error('title_ar')
-                                <div class="alert alert-danger">{{$message}}</div>
-                                @enderror
-                            </div>
-
-                        </div>
-
-                        <br>
-
-                        <div class="row">
-                            <div class="col">
-                                <label class="mb-2">{{trans('admin/services.Service_notes')}}</label>
-                               textarea class="form-control @error('notes') is-invalid @enderror" rows="5"
-                                          name="notes" required> {{old('notes')}} </textarea>
-                                @error('notes')
+                                <label class="mb-2">{{trans('admin/testimonials.Testimonial_name')}}</label>
+                                <input type="text" name="name"
+                                       class="form-control  @error('name') is-invalid @enderror" required
+                                       value="{{old('name')}}">
+                                @error('name')
                                 <div class="alert alert-danger">{{$message}}</div>
                                 @enderror
                             </div>
                         </div>
 
                         <br>
+
                         <div class="row">
                             <div class="col">
-                                <label class="mb-2">{{trans('admin/services.Service_notes_ar')}}</label>
-                               textarea class="form-control @error('notes_ar') is-invalid @enderror"
-                                          rows="5" name="notes_ar" required> {{old('notes_ar')}} </textarea>
-                                @error('notes_ar')
+                                <label class="mb-2">{{trans('admin/testimonials.Testimonial_feedback')}}</label>
+                                <textarea class="form-control @error('feedback') is-invalid @enderror" rows="5"
+                                          name="feedback" required> {{old('feedback')}} </textarea>
+                                @error('feedback')
                                 <div class="alert alert-danger">{{$message}}</div>
                                 @enderror
                             </div>
                         </div>
+
+                        <br>
 
                         <br>
 
                         <div class="row">
                             <div class="col-xl-9 mx-auto">
                                 <p class="text-danger">
-                                    * {{trans('admin/services.Attachments_are_of_image_type_only')}}</p>
-                                <h6 class="mb-0 text-uppercase">{{trans('admin/services.Attachments')}}</h6>
+                                    * {{trans('admin/testimonials.Attachments_are_of_image_type_only')}}</p>
+                                <h6 class="mb-0 text-uppercase">{{trans('admin/testimonials.Attachments')}}</h6>
                                 <hr/>
                                 <div class="card">
                                     <div class="card-body">
@@ -96,7 +75,7 @@
 
                         <div class="row">
                             <div class="col">
-                                <button class="btn btn-success">{{trans('admin/services.Add_new_Service')}}</button>
+                                <button class="btn btn-success">{{trans('admin/testimonials.Add_new_Testimonial')}}</button>
                             </div>
                         </div>
                     </form>
