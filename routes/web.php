@@ -6,6 +6,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use App\Http\Controllers\effects;
 use Spatie\Sitemap\SitemapGenerator;
 use App\Models\Service;
+use App\Models\Testimonial;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,7 +46,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
             // 'features' => feature::whereActive(1)->orderByDesc('id')->limit(3)->get(),
             // 'projects' => project::whereActive(1)->orderByDesc('id')->limit(3)->get(),
             // 'news' => news::whereActive(1)->orderByDesc('id')->limit(3)->get(),
-            // 'testimonials' => Testimonial::whereActive(1)->orderByDesc('id')->limit(3)->get(),
+            'testimonials' => Testimonial::whereActive(1)->orderByDesc('id')->limit(3)->get(),
         ];
         return view($this->theme.'.about-us',$date);
     })->name('aboutus');

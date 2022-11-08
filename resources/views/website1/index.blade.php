@@ -1,6 +1,5 @@
 @extends('layouts.website1.master')
 @section('content')
-
     <!-- Main Banner -->
     <div class="main-banner">
         <div class="container-fluid">

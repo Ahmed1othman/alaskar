@@ -93,7 +93,7 @@ class HomeController extends Controller
     }
     public function siteservices()
     {
-        $data = Service::whereActive(1)->orderByDesc('id')->get();
+        $data['services'] = Service::whereActive(1)->orderByDesc('id')->get();
         $this->seo()->setTitle('خدمات مؤسسة العسكر');
         $this->seo()->metatags()->setKeywords(['مؤسسة العسكر لعزل الاسطح','عزل مائي','عزل اسطح','فوم','افضل انواع العوازل']);
         //seo meta tags for home page using seotools package
@@ -136,13 +136,15 @@ class HomeController extends Controller
     }
     public function sitenews()
     {
-        $data = news::whereActive(1)->orderByDesc('id')->get();
-        return view($this->theme.'.news', compact('data'));
+        $data['services'] = Service::whereActive(1)->orderByDesc('id')->get();
+        $data['news'] = news::whereActive(1)->orderByDesc('id')->paginate(8);
+        return view($this->theme.'.news', $data);
     }
     public function newsDetails($id)
     {
-        $row = news::find($id);
-        return view($this->theme.'.news-details', compact('row'));
+        $data['services'] = Service::whereActive(1)->orderByDesc('id')->get();
+        $data['new']  = news::find($id);
+        return view($this->theme.'.news-details', $data);
     }
 
 
