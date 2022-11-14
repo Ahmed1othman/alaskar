@@ -141,8 +141,6 @@ function activeSection(id) {
     if (checkBox.checked == true) {
         active = 1;
     }
-
-    alert(active);
     $.ajax({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')

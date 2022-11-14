@@ -47,4 +47,8 @@ return [
     'portfolio_pdf'=>'Profile',
     'services_details' => 'Services Details',
     'projects_details' => 'Projects Details',
+    'our_news_offers_detials' => 'News Detials',
+    'project_detials' => 'Project Details',
+    'service_detials' => 'Services Details',
+
 ];

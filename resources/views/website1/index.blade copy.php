@@ -134,10 +134,10 @@
             @foreach($services as $service)
                 <div class="col-lg-4 col-sm-6">
                     <div class="service-card">
-                        <a href="service-details.html">
+                        <a href="{{route('services-details',$service->id)}}">
                            <img src="{{asset($service->image)}}" alt="Images" style="max-height: 150px; max-width: 150px; border-radius: 10%">
                         </a>
-                        <a href="service-details.html">
+                        <a href="{{route('services-details',$service->id)}}">
                             <h3>{{$service->title}}</h3>
                         </a>
                         <p>

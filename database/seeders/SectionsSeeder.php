@@ -25,6 +25,7 @@ class SectionsSeeder extends Seeder
         ActiveSection::create(['section_name' => 'why_chosse_us']);
         ActiveSection::create(['section_name' => 'request_call_back']);
         ActiveSection::create(['section_name' => 'subscritoin']);
+        ActiveSection::create(['section_name' => 'statistics']);
         ActiveSection::create(['section_name' => 'footer']);
     }
 }

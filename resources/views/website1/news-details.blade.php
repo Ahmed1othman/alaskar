@@ -7,7 +7,7 @@
  <div class="inner-banner" style="background-image: url({{asset('storage/front/'.websiteInfo_hlp('news_posts_background_image'))}});">
     <div class="container">
         <div class="inner-title text-center">
-            <h3>{{__('site/app.about_us')}}</h3>
+            <h3>{{__('site/app.news')}}</h3>
             <ul>
                 <li>
                     <a href="{{route('home')}}">{{__('site/app.home')}}</a>
@@ -29,12 +29,12 @@
             <div class="col-lg-12">
                 <div class="blog-dtls-content">
                     <div class="blog-dtls-img">
-                        <img src="{{asset($new->image)}}" alt="Blog Images">
+                        <img src="{{asset($new->image)}}" alt="Blog Images" style="max-height: 500px;max-width: 800px">
                     </div>
                     <div class="blog-text">
                         <h2>{{$new->title}}</h2>
                         <p>
-                            {{$new->content}}
+                            {!!$new->content!!}
                         </p>
                     </div>
                 </div>

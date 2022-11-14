@@ -40,12 +40,12 @@
                         <h3>{{ __('site/app.services') }}</h3>
                         <ul>
                             @foreach ( $services as $Service )
-
+                                <li>
+                                    <i class='bx bxs-chevron-right'></i>
+                                    <a href="">{{$Service->title}}</a>
+                                </li>
                             @endforeach
-                            <li>
-                                <i class='bx bxs-chevron-right'></i>
-                                <a href="services.html">{{$Service->title}}</a>
-                            </li>
+                           
                         </ul>
                     </div>
                 </div>

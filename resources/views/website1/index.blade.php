@@ -90,7 +90,7 @@
     <!-- Brand Area End --> --}}
 
     <!-- About Area -->
-    <div id="About_Us" class="about-area brand-bg pt-100 pb-70">
+    <div id="About_Us {{ showSection_hlp('about_us') }}" class="about-area brand-bg pt-100 pb-70">
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-xxl-6 ps-0">
@@ -120,7 +120,7 @@
     <!-- About Area End -->
 
     <!-- Service Area -->
-    <section class="service-area pb-70 pt-70">
+    <section class="service-area pb-70 pt-70 {{ showSection_hlp('services') }}">
         <div class="container">
             <div class="section-title text-center">
                 <span>{{__('site/app.our_services')}}</span>
@@ -133,10 +133,10 @@
             @foreach($services as $service)
                 <div class="col-lg-4 col-sm-6">
                     <div class="service-card">
-                        <a href="service-details.html">
+                        <a href="{{route('service.details',$service->id)}}">
                            <img src="{{asset($service->image)}}" alt="Images" style="max-height: 150px; max-width: 150px; border-radius: 10%">
                         </a>
-                        <a href="service-details.html">
+                        <a href="{{route('service.details',$service->id)}}">
                             <h3>{{$service->title}}</h3>
                         </a>
                         <p>
@@ -233,7 +233,7 @@
     <!-- Faq Area End -->
 
     <!-- Portfolio Area -->
-    <section class="portfolio-area pt-100 pb-70">
+    <section class="portfolio-area pt-100 pb-70 {{ showSection_hlp('projects') }}">
         <div class="container">
             <div class="section-title text-center">
                 <span>{{__('site/app.projects')}}</span>
@@ -265,7 +265,7 @@
     <!-- Portfolio Area End -->
 
     <!-- Submission Area -->
-    <div class="submission-area ptb-100">
+    <div class="submission-area ptb-100 {{ showSection_hlp('subscritoin') }}">
         <div class="container">
             <div class="submission-title">
                 <h2>{{websiteInfo_hlp('subscribe_title_'.app()->getLocale())}}</h2>
@@ -599,7 +599,7 @@
     <!-- Member Area End -->
 
     <!-- Counter Area -->
-    <div class="counter-area pt-100 pb-70">
+    <div class="counter-area pt-100 pb-70 {{ showSection_hlp('statistics') }}">
         <div class="container">
             <div class="row">
                 @if(websiteInfo_hlp('experiance_years'))
@@ -647,7 +647,7 @@
     <!-- Counter Area End -->
 
     <!-- Testimonial Area -->
-    <div class="testimonial-area pt-100 pb-70">
+    <div class="testimonial-area pt-100 pb-70 {{ showSection_hlp('testimonials') }}">
         <div class="container-fluid">
             <div class="section-title text-center">
                 <span>{{trans('site/app.our_clients_feedback')}}</span>
@@ -698,7 +698,7 @@
     <!-- Testimonial Area End -->
 
     <!-- Blog Area -->
-    <div class="blog-area pb-70">
+    <div class="blog-area pb-70 {{ showSection_hlp('news') }}">
         <div class="container">
             <div class="section-title text-center">
                 <span>{{trans('site/app.our_news_offers')}}</span>

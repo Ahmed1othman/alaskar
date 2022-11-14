@@ -62,7 +62,9 @@ return [
     'projects_number'=>'عدد سابقات الاعمال',
     'clients_number'=>'عدد عملائنا الكرام',
     'employees_number'=>'عدد الموضفين والعاملين لدينا',
+    'our_news_offers_detials' => 'تفاصيل الخبر',
+    'project_detials' => 'تفاصيل المشروع',
+    'service_detials' => 'تفاصيل الخدمة',
 
-
-
+    
 ];

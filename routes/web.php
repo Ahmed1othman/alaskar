@@ -55,7 +55,8 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
 
     ################## Start Route Get contact-us ###########################
     Route::get('/contact-us', function () {
-        return view($this->theme.'.contact-us');
+        $data['services'] = Service::whereActive(1)->orderByDesc('id')->get();
+        return view($this->theme.'.contact-us',$data);
     })->name('contactus');
     ################## End Route Get contact-us ###########################
 

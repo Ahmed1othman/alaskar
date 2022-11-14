@@ -65,35 +65,34 @@ class HomeController extends Controller
         $this->seo()->opengraph()->addProperty('locale:alternate', ['ar_AR', 'en_US']);
         $this->seo()->opengraph()->setTitle('مؤسسة العسكر - الصفحة الرئيسية');
         $this->seo()->opengraph()->setDescription('مؤسسة العسكر للمقاولات واعمال العزل, هي واحدة من اهم وافضل الشركات في هذا المجال في الرياض');
-
-
-
         return view($this->theme.'.index', $date);
     }
     public function siteprojects()
     {
-        $data = project::whereActive(1)->orderByDesc('id')->get();
-        return view($this->theme.'.projects', compact('data'));
+        $data['projects'] = project::whereActive(1)->orderByDesc('id')->paginate(8);
+        $data['services'] = Service::whereActive(1)->orderByDesc('id')->get();
+        return view($this->theme.'.projects', $data);
     }
     public function projectDetails($id)
     {
-        $row = project::find($id);
-        $this->seo()->setTitle('المشاريع - '.$row->title);
+        $data['services'] = Service::whereActive(1)->orderByDesc('id')->paginate(9);
+        $data['row'] = project::find($id);
+        $this->seo()->setTitle('المشاريع - '.$data['row']->title);
         $this->seo()->setDescription('مؤسسة العسكر للمقاولات واعمال العزل, هي واحدة من اهم وافضل الشركات في هذا المجال في الرياض');
-        $this->seo()->opengraph()->addImage(asset($row->image));
+        $this->seo()->opengraph()->addImage(asset($data['row']->image));
         $this->seo()->setCanonical(url('/'));
         $this->seo()->opengraph()->setUrl(url('/'));
         $this->seo()->opengraph()->addProperty('type', 'website');
         $this->seo()->opengraph()->addProperty('locale', 'ar_AR');
         $this->seo()->opengraph()->addProperty('locale:alternate', ['ar_AR', 'en_US']);
-        $this->seo()->opengraph()->setTitle('المشاريع | '.$row->title);
+        $this->seo()->opengraph()->setTitle('المشاريع | '.$data['row']->title);
         $this->seo()->opengraph()->setDescription('مؤسسة العسكر للمقاولات واعمال العزل, هي واحدة من اهم وافضل الشركات في هذا المجال في الرياض');
 
-        return view($this->theme.'.project-details', compact('row'));
+        return view($this->theme.'.project-details', $data);
     }
     public function siteservices()
     {
-        $data['services'] = Service::whereActive(1)->orderByDesc('id')->get();
+        $data['services'] = Service::whereActive(1)->orderByDesc('id')->paginate(9);
         $this->seo()->setTitle('خدمات مؤسسة العسكر');
         $this->seo()->metatags()->setKeywords(['مؤسسة العسكر لعزل الاسطح','عزل مائي','عزل اسطح','فوم','افضل انواع العوازل']);
         //seo meta tags for home page using seotools package
@@ -107,29 +106,31 @@ class HomeController extends Controller
         $this->seo()->opengraph()->setTitle('مؤسسة العسكر - الصفحة الرئيسية');
         $this->seo()->opengraph()->setDescription('مؤسسة العسكر للمقاولات واعمال العزل, هي واحدة من اهم وافضل الشركات في هذا المجال في الرياض');
 
-        return view($this->theme.'.services', compact('data'));
+        return view($this->theme.'.services', $data);
     }
     public function serviceDetails($id)
     {
-        $row = service::find($id);
-        $this->seo()->setTitle('الخدمات - '.$row->title);
+        $data['services'] = Service::whereActive(1)->orderByDesc('id')->get();
+        $data['row'] = service::find($id);
+        $this->seo()->setTitle('الخدمات - '.$data['row']->title);
         $this->seo()->setDescription('مؤسسة العسكر للمقاولات واعمال العزل, هي واحدة من اهم وافضل الشركات في هذا المجال في الرياض');
-        $this->seo()->opengraph()->addImage(asset($row->image));
+        $this->seo()->opengraph()->addImage(asset($data['row']->image));
         $this->seo()->setCanonical(url('/'));
         $this->seo()->opengraph()->setUrl(url('/'));
         $this->seo()->opengraph()->addProperty('type', 'website');
         $this->seo()->opengraph()->addProperty('locale', 'ar_AR');
         $this->seo()->opengraph()->addProperty('locale:alternate', ['ar_AR', 'en_US']);
-        $this->seo()->opengraph()->setTitle('الخدمات | '.$row->title);
-        $this->seo()->opengraph()->setDescription($row->notes);
+        $this->seo()->opengraph()->setTitle('الخدمات | '.$data['row']->title);
+        $this->seo()->opengraph()->setDescription($data['row']->notes);
 
-        return view($this->theme.'.service-details', compact('row'));
+        return view($this->theme.'.service-details', $data);
     }
     public function customPage($slug)
     {
-        $row = Custom::where('name_'.App::getLocale(),$slug)->first();
+        $data['services'] = Service::whereActive(1)->orderByDesc('id')->get();
+        $data['row'] =Custom::where('name_'.App::getLocale(),$slug)->first();
         if($row){
-            return view($this->theme.'.custom-page', compact('row'));
+            return view($this->theme.'.custom-page', $data);
         }
         return redirect('/');
 

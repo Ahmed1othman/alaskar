@@ -94,6 +94,7 @@ class InfoSeeder extends Seeder
 
         //pages background
         ['option' => 'about_background_image','value' => 'projects.png','type' => 'image'],
+        ['option' => 'services_background_image','value' => 'projects.png','type' => 'image'],
         ['option' => 'projects_background_image','value' => 'projects.png','type' => 'image'],
         ['option' => 'news_posts_background_image','value' => 'news_posts.png','type' => 'image'],
         ['option' => 'call_background_image','value' => 'call.png','type' => 'image'],
