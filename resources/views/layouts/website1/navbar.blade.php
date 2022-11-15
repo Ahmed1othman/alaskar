@@ -91,7 +91,7 @@
                     </ul>
 
                     <div class="menu-btn">
-                        <a href="#contact_us" class="seo-btn">{{__('site/app.contact_us')}}</a>
+                        <a href="{{route('contactus')}}" class="seo-btn">{{__('site/app.contact_us')}}</a>
                     </div>
                 </div>
             </nav>

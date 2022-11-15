@@ -24,8 +24,6 @@
     <link rel="stylesheet" href="{{ asset('website1/rtl/css/bootstrap.min.css')}}">
     <!-- Owl Carousel CSS -->
 
-
-
     <!-- Bootstrap RTL CSS -->
     <link rel="stylesheet" href="{{ asset('website1/rtl/css/bootstrap.rtl.min.css')}}">
     <!-- Owl Carousel CSS -->
@@ -47,11 +45,22 @@
     <link rel="stylesheet" href="{{ asset('website1/rtl/css/responsive.css')}}">
     <!-- RTL CSS -->
     <link rel="stylesheet" href="{{ asset('website1/rtl/css/rtl.css')}}">
+
+    <style>
+        .bxs-chevron-right:before {
+            content: "\eceb";
+        }
+
+        .main-nav nav .navbar-nav .nav-item a:hover i {
+            -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+        }
+    </style>
 @endif
 
 
 
-
+<link href="{{ asset('admin/assets/plugins/notifications/css/lobibox.min.css') }}" rel="stylesheet"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <style>

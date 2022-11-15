@@ -112,7 +112,7 @@ function submitContactUs() {
                 phone: contact_phone.value,
                 msg: contact_msg.value
             },
-            async: false,
+            async: true,
             success: function(data) {
                 var obj = JSON.parse(data);
                 if (obj.code === 0) {

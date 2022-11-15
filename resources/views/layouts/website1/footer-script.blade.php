@@ -43,7 +43,9 @@
 
 @endif
 
-
+<script src="{{ asset('admin/assets/plugins/notifications/js/lobibox.min.js') }}"></script>
+<script src="{{ asset('admin/assets/plugins/notifications/js/notifications.min.js') }}"></script>
+<script src="{{ asset('admin/assets/plugins/notifications/js/notification-custom-script.js') }}"></script>
 <script>
     var app_url = "{{url('/')}}";
     var lang = "{{app()->getLocale()}}";

@@ -40,12 +40,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
     ################## Start Route Get about-us ###########################
     Route::get('/about-us', function () {
         $date = [
-            // 'slideroption' => $slideroption,
             'services' => Service::whereActive(1)->orderByDesc('id')->limit(3)->get(),
-            // 'sliders' => Slider::whereActive(1)->orderByDesc('id')->limit(3)->get(),
-            // 'features' => feature::whereActive(1)->orderByDesc('id')->limit(3)->get(),
-            // 'projects' => project::whereActive(1)->orderByDesc('id')->limit(3)->get(),
-            // 'news' => news::whereActive(1)->orderByDesc('id')->limit(3)->get(),
             'testimonials' => Testimonial::whereActive(1)->orderByDesc('id')->limit(3)->get(),
         ];
         return view($this->theme.'.about-us',$date);

@@ -32,7 +32,7 @@
 						{{ __('site/app.send_us_a_message') }}
 					</h3>
 
-					<form id="contact-form" class="validate-form" method="post" action="includes/contact-form.php" name="contact">
+					{{-- <form id="contact-form" class="validate-form" method="post" action="includes/contact-form.php" name="contact">
 						<div class="m-b-15 validate-input" data-validate = "Name is required">
 							<input class="size-a-3 t1-m-2 plh-6 cl-6 p-rl-20 bo-1-rad-4 bcl-12 focus-in1" type="text" id="contact_name" name="name" placeholder="{{ __('site/app.your_name') }}">
 						</div>
@@ -52,7 +52,7 @@
 						<button type="button" onclick="submitContactUs()" class="size-a-15 flex-c-c bg-11 t1-s-2 text-uppercase cl-0 hov-btn1 trans-02 p-rl-15">
 							{{ __('site/app.send_email') }}
 						</button>
-					</form>
+					</form> --}}
 				</div>
 
 				<div class="col-sm-10 col-md-6 p-b-60">

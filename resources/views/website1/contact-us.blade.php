@@ -13,7 +13,7 @@
                             <a href="index.html">{{__('site/app.home')}}</a>
                         </li>
                         <li>
-                            <i class='bx bxs-chevrons-right'></i>
+                            <i class='bx bxs-chevrons-left'></i>
                         </li>
                         <li>{{__('site/app.contact_us')}}</li>
                     </ul>
@@ -70,56 +70,47 @@
             <div class="container">
                 <div class="scetion-title text-center">
                     <span>{{__('site/app.contact_us')}}</span>
-                    <h2>{{websiteInfo_hlp('')}}</h2>
+                    <h2>{{websiteInfo_hlp('contact_us_title')}}</h2>
                     <p>
-                        It is a long established fact that a reader will be distracted by
-                        the readable content of a page when looking at its layout.
+                        {{websiteInfo_hlp('contact_us_paragrph_'.App::getLocale())}}
                     </p>
                 </div>
                 <div class="contact-wrap pt-45">
                    <div class="contact-wrap-form">
-                        <form id="contactForm">
+                        <form id="contact-form" name="contact">
                             <div class="row">
-                                <div class="col-lg-6 col-sm-6">
+                                <div class="col-lg-12 col-sm-12">
                                     <div class="form-group">
-                                        <input type="text" name="name" id="name" class="form-control" required data-error="Please enter your name" placeholder="Your Name">
+                                        <input type="text" id="contact_name" name="name" placeholder="{{ __('site/app.your_name') }}" class="form-control">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
 
-                                <div class="col-lg-6 col-sm-6">
+                                <div class="col-lg-12 col-sm-12">
                                     <div class="form-group">
-                                        <input type="email" name="email" id="email" class="form-control" required data-error="Please enter your email" placeholder="Your Email">
+                                        <input type="email" type="text" id="contact_email" name="email" placeholder="{{ __('site/app.your_email') }}" class="form-control">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
 
-                                <div class="col-lg-6 col-sm-6">
+                                <div class="col-lg-12 col-sm-12">
                                     <div class="form-group">
-                                        <input type="text" name="phone_number" id="phone_number" required data-error="Please enter your number" class="form-control" placeholder="Your Phone">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-sm-6">
-                                    <div class="form-group">
-                                        <input type="text" name="msg_subject" id="msg_subject" class="form-control" required data-error="Please enter your subject" placeholder="Your Subject">
+                                        <input type="text" id="contact_phone" name="phone" placeholder="{{ __('site/app.your_number') }}" class="form-control">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-12 col-md-12">
                                     <div class="form-group">
-                                        <textarea name="message" class="form-control" id="message" cols="30" rows="8" required data-error="Write your message" placeholder="Your Message"></textarea>
+                                        <textarea name="msg" id="contact_msg" placeholder="{{ __('site/app.your_message') }}" class="form-control" cols="30" rows="8"></textarea>
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-12 col-md-12 text-center">
-                                    <button type="submit" class="default-btn page-btn text-center">
-                                        Send Message
+                                    <button type="button" onclick="submitContactUs()" class="default-btn page-btn text-center">
+                                        {{ __('site/app.send_email') }}
                                     </button>
-                                    <div id="msgSubmit" class="h3 text-center hidden"></div>
                                     <div class="clearfix"></div>
                                 </div>
                             </div>
