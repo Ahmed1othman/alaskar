@@ -6,6 +6,7 @@ return [
     'Home' => 'الصفحة الرئيسية',
     'open_marketing' => 'افتح التسويق',
     'sign_in' => 'تسجيل الدخول',
+    'dashboard' => 'لوحة التحكم',
     'mazad' => 'مازاد',
     'buying_and_selling_information' => 'شراء وبيع المعلومات',
     'rest_information' => 'معلومات الراحة',
@@ -66,5 +67,5 @@ return [
     'project_detials' => 'تفاصيل المشروع',
     'service_detials' => 'تفاصيل الخدمة',
 
-    
+
 ];

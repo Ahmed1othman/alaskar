@@ -10,6 +10,7 @@ return [
   'add_new' => 'اضف جديد',
   'save' => 'حفظ',
   'services' => 'خدمات',
+  'website_preview' => 'معاينة الموقع',
   'sliders' => 'سليدر',
   'navbar' => 'navbar',
   'create_navbar' => 'تحديث عنصر Navbar',
@@ -173,6 +174,6 @@ return [
   'services_background_image' => 'خلفية صفحة خدماتنا',
   'testimonials' => 'اراء العملاء',
   'our_news_offers_detials' => 'تفاصيل الخبر',
-  
-  
+
+
 ];

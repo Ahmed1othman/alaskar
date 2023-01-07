@@ -72,14 +72,20 @@
                     </div>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
-                    <li class="dropdown-item"> <a href="{{ route('logout') }}"
+                    <li class="dropdown-item">
+                        <a href="{{ route('logout') }}"
                             onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                             <i class='bx bx-log-out-circle'></i> {{ __('Log Out') }}
                         </a>
-
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             {{ csrf_field() }}
                         </form>
+                    </li>
+
+                    <li class="dropdown-item">
+                        <a href="{{ route('logout') }}">
+                            <i class='bx bx-slideshow'></i> {{ __('admin/app.website_preview') }}
+                        </a>
                     </li>
 
                 </ul>

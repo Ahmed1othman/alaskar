@@ -5,6 +5,7 @@ return [
     'Projects' => 'Projects',
     'Services' => 'Services',
     'News' => 'News',
+    'dashboard' => 'Go To Dashboard',
     'About Us' => 'About Us',
     'contact_us' => 'Contact Us',
     'home' => 'Home',

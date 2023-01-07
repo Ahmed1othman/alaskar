@@ -93,6 +93,12 @@
                     <div class="menu-btn">
                         <a href="{{route('contactus')}}" class="seo-btn">{{__('site/app.contact_us')}}</a>
                     </div>
+
+                    @if(auth()->check())
+                        <div class="menu-btn me-2">
+                            <a href="{{route('admin')}}" class="seo-btn">{{__('site/app.dashboard')}}</a>
+                        </div>
+                    @endif
                 </div>
             </nav>
         </div>

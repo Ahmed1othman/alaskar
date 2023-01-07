@@ -11,6 +11,7 @@ return [
   'save' => 'Save',
   'services' => 'Services',
   'sliders' => 'Sliders',
+  'website_preview' => 'Website Preview',
   'navbar' => 'Navbar',
   'create_navbar' => 'Update Navbar Item',
   'create_slider' => 'Create Slider',
@@ -77,7 +78,7 @@ return [
   'services_background_image' => 'Our Services Background Image',
   'testimonials' => 'Testimonials',
 
-  
+
 
 
   'address_en' => 'Address By English',
