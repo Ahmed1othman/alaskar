@@ -83,7 +83,7 @@
                     </li>
 
                     <li class="dropdown-item">
-                        <a href="{{ route('logout') }}">
+                        <a href="{{ route('home') }}">
                             <i class='bx bx-slideshow'></i> {{ __('admin/app.website_preview') }}
                         </a>
                     </li>
