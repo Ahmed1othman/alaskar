@@ -7,6 +7,7 @@ return [
     'News' => 'News',
     'dashboard' => 'Go To Dashboard',
     'About Us' => 'About Us',
+    'news_posts' => 'Our News and Offers',
     'contact_us' => 'Contact Us',
     'home' => 'Home',
     'open_marketing' => 'Open Marketing',
@@ -49,6 +50,7 @@ return [
     'services_details' => 'Services Details',
     'projects_details' => 'Projects Details',
     'our_news_offers_detials' => 'News Detials',
+    'our_projects' => 'Our Projects',
     'project_detials' => 'Project Details',
     'service_detials' => 'Services Details',
 

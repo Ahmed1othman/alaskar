@@ -8,7 +8,7 @@
         <div class="inner-banner" style="background-image: url({{asset('storage/front/'.websiteInfo_hlp('news_posts_background_image'))}});">
             <div class="container">
                 <div class="inner-title text-center">
-                    <h3>{{__('site/app.about_us')}}</h3>
+                    <h3>{{__('site/app.our_news_offers')}}</h3>
                     <ul>
                         <li>
                             <a href="{{route('home')}}">{{__('site/app.home')}}</a>
