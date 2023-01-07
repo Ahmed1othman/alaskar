@@ -1,47 +1,47 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
-<link href="{{asset('admin/assets/plugins/datatable/css/dataTables.bootstrap5.min.css')}}" rel="stylesheet" />
-<link href="{{ asset('admin/assets/plugins/notifications/css/lobibox.min.css') }}" rel="stylesheet"/>
-@if (app()->getLocale()=='ar')<link href="{{ asset('admin/assets/plugins/notifications/css/lobibox.min.css') }}" rel="stylesheet"/>
-<link href="{{ asset('admin/assets/plugins/vectormap/jquery-jvectormap-2.0.2.css') }}" rel="stylesheet"/>
-<link href="{{ asset('admin/assets/plugins/simplebar/css/simplebar.css') }}" rel="stylesheet" />
-<link href="{{ asset('admin/assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css') }}" rel="stylesheet" />
-<link href="{{ asset('admin/assets/plugins/metismenu/css/metisMenu.min.css') }}" rel="stylesheet" />
+<link href="{{asset('admin_dashboard/assets/plugins/datatable/css/dataTables.bootstrap5.min.css')}}" rel="stylesheet" />
+<link href="{{ asset('admin_dashboard/assets/plugins/notifications/css/lobibox.min.css') }}" rel="stylesheet"/>
+@if (app()->getLocale()=='ar')<link href="{{ asset('admin_dashboard/assets/plugins/notifications/css/lobibox.min.css') }}" rel="stylesheet"/>
+<link href="{{ asset('admin_dashboard/assets/plugins/vectormap/jquery-jvectormap-2.0.2.css') }}" rel="stylesheet"/>
+<link href="{{ asset('admin_dashboard/assets/plugins/simplebar/css/simplebar.css') }}" rel="stylesheet" />
+<link href="{{ asset('admin_dashboard/assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css') }}" rel="stylesheet" />
+<link href="{{ asset('admin_dashboard/assets/plugins/metismenu/css/metisMenu.min.css') }}" rel="stylesheet" />
 <!-- loader-->
-<link href="{{ asset('admin/assets/plugins/datatable/css/dataTables.bootstrap5.min.css') }}" rel="stylesheet" />
-<link href="{{ asset('admin/assets/css/pace.min.css') }}" rel="stylesheet" />
-<script src="{{ asset('admin/assets/js/pace.min.js')}}"></script>
+<link href="{{ asset('admin_dashboard/assets/plugins/datatable/css/dataTables.bootstrap5.min.css') }}" rel="stylesheet" />
+<link href="{{ asset('admin_dashboard/assets/css/pace.min.css') }}" rel="stylesheet" />
+<script src="{{ asset('admin_dashboard/assets/js/pace.min.js')}}"></script>
 <!-- Bootstrap CSS -->
-<link href="{{ asset('admin/assets/css/bootstrap.min.css') }}" rel="stylesheet">
-<link href="{{ asset('admin/assets/css/app.css') }}" rel="stylesheet">
-<link href="{{ asset('admin/assets/css/icons.css') }}" rel="stylesheet">
+<link href="{{ asset('admin_dashboard/assets/css/bootstrap.min.css') }}" rel="stylesheet">
+<link href="{{ asset('admin_dashboard/assets/css/app.css') }}" rel="stylesheet">
+<link href="{{ asset('admin_dashboard/assets/css/icons.css') }}" rel="stylesheet">
 <!-- Theme Style CSS -->
-<link rel="stylesheet" href="{{ asset('admin/assets/css/dark-theme.css') }}" />
-<link rel="stylesheet" href="{{ asset('admin/assets/css/semi-dark.css') }}" />
-<link rel="stylesheet" href="{{ asset('admin/assets/css/header-colors.css') }}" />
+<link rel="stylesheet" href="{{ asset('admin_dashboard/assets/css/dark-theme.css') }}" />
+<link rel="stylesheet" href="{{ asset('admin_dashboard/assets/css/semi-dark.css') }}" />
+<link rel="stylesheet" href="{{ asset('admin_dashboard/assets/css/header-colors.css') }}" />
 @else
-<link href="{{ asset('admin/assetsEn/plugins/notifications/css/lobibox.min.css') }}" rel="stylesheet"/>
-<link href="{{ asset('admin/assetsEn/plugins/vectormap/jquery-jvectormap-2.0.2.css') }}" rel="stylesheet"/>
-<link href="{{ asset('admin/assetsEn/plugins/simplebar/css/simplebar.css') }}" rel="stylesheet" />
-<link href="{{ asset('admin/assets/plugins/input-tags/css/tagsinput.css') }}" rel="stylesheet">
+<link href="{{ asset('admin_dashboard/assetsEn/plugins/notifications/css/lobibox.min.css') }}" rel="stylesheet"/>
+<link href="{{ asset('admin_dashboard/assetsEn/plugins/vectormap/jquery-jvectormap-2.0.2.css') }}" rel="stylesheet"/>
+<link href="{{ asset('admin_dashboard/assetsEn/plugins/simplebar/css/simplebar.css') }}" rel="stylesheet" />
+<link href="{{ asset('admin_dashboard/assets/plugins/input-tags/css/tagsinput.css') }}" rel="stylesheet">
 
-<link href="{{ asset('admin/assetsEn/plugins/perfect-scrollbar/css/perfect-scrollbar.css') }}" rel="stylesheet" />
-<link href="{{ asset('admin/assetsEn/plugins/metismenu/css/metisMenu.min.css') }}" rel="stylesheet" />
+<link href="{{ asset('admin_dashboard/assetsEn/plugins/perfect-scrollbar/css/perfect-scrollbar.css') }}" rel="stylesheet" />
+<link href="{{ asset('admin_dashboard/assetsEn/plugins/metismenu/css/metisMenu.min.css') }}" rel="stylesheet" />
 <!-- loader-->
-<link href="{{ asset('admin/assetsEn/css/pace.min.css') }}" rel="stylesheet" />
-<script src="{{ asset('admin/assetsEn/js/pace.min.js')}}"></script>
+<link href="{{ asset('admin_dashboard/assetsEn/css/pace.min.css') }}" rel="stylesheet" />
+<script src="{{ asset('admin_dashboard/assetsEn/js/pace.min.js')}}"></script>
 <!-- Bootstrap CSS -->
-<link href="{{ asset('admin/assetsEn/css/bootstrap.min.css') }}" rel="stylesheet">
+<link href="{{ asset('admin_dashboard/assetsEn/css/bootstrap.min.css') }}" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-<link href="{{ asset('admin/assetsEn/css/app.css') }}" rel="stylesheet">
+<link href="{{ asset('admin_dashboard/assetsEn/css/app.css') }}" rel="stylesheet">
 
-<link href="{{ asset('admin/assetsEn/css/icons.css') }}" rel="stylesheet">
+<link href="{{ asset('admin_dashboard/assetsEn/css/icons.css') }}" rel="stylesheet">
 <!-- Theme Style CSS -->
 
-<link rel="stylesheet" href="{{ asset('admin/assetsEn/css/dark-theme.css') }}" />
-<link rel="stylesheet" href="{{ asset('admin/assetsEn/css/semi-dark.css') }}" />
-<link rel="stylesheet" href="{{ asset('admin/assetsEn/css/header-colors.css') }}" />
+<link rel="stylesheet" href="{{ asset('admin_dashboard/assetsEn/css/dark-theme.css') }}" />
+<link rel="stylesheet" href="{{ asset('admin_dashboard/assetsEn/css/semi-dark.css') }}" />
+<link rel="stylesheet" href="{{ asset('admin_dashboard/assetsEn/css/header-colors.css') }}" />
 @endif
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css"
       rel="stylesheet" />
@@ -65,7 +65,7 @@
         font-family: Cairo;
     }
 </style>
-<link rel="stylesheet" type="text/css" href="{{asset('admin/assets/css/coloris.min.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('admin_dashboard/assets/css/coloris.min.css')}}">
 
 
 <script src="{{asset('assets/ckeditor4/ckeditor/ckeditor.js')}}"></script>

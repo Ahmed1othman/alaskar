@@ -26,7 +26,7 @@
     @endif
 
 
-<link href="{{ asset('admin/assets/plugins/notifications/css/lobibox.min.css') }}" rel="stylesheet"/>
+<link href="{{ asset('admin_dashboard/assets/plugins/notifications/css/lobibox.min.css') }}" rel="stylesheet"/>
 
 
 

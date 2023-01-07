@@ -31,9 +31,9 @@
 <!--===============================================================================================-->
 <script src="{{ asset('website/vendorAsset/MagnificPopup/jquery.magnific-popup.min.js')}}"></script>
 <!--===============================================================================================-->
-<script src="{{ asset('admin/assets/plugins/notifications/js/lobibox.min.js') }}"></script>
-<script src="{{ asset('admin/assets/plugins/notifications/js/notifications.min.js') }}"></script>
-<script src="{{ asset('admin/assets/plugins/notifications/js/notification-custom-script.js') }}"></script>
+<script src="{{ asset('admin_dashboard/assets/plugins/notifications/js/lobibox.min.js') }}"></script>
+<script src="{{ asset('admin_dashboard/assets/plugins/notifications/js/notifications.min.js') }}"></script>
+<script src="{{ asset('admin_dashboard/assets/plugins/notifications/js/notification-custom-script.js') }}"></script>
 <script src="{{ asset('website/js/main.js')}}"></script>
 
 <script>

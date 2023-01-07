@@ -30,9 +30,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 require __DIR__ . '/auth.php';
 
 Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['auth','localeSessionRedirect', 'localizationRedirect', 'localeViewPath']], function () {
-
     Route::get('/admin', [HomeController::class, 'index'])->name('admin');
-
     ###################### Start Routes orders  ######################
     Route::get('/slider-option', [HomeController::class, 'showsliderOption'])->name('slider-option');
     Route::get('/update-slider-option', [HomeController::class, 'updatesliderOption'])->name('update-slider-option');

@@ -10,31 +10,27 @@
 
 
                     <li class="nav-item dropdown dropdown-large">
-
                         <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            @if (App()->getLocale() == 'ar')
+                            @if (App()->getLocale() =='ar')
                                 <i class="flag-icon flag-icon-eg"></i>
                             @else
-
                                 <i class="flag-icon flag-icon-us"></i>
                             @endif
                         </a>
-
-
                         <div class="dropdown-menu dropdown-menu-end">
                             @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)<a
                                     rel="alternate" hreflang="{{ $localeCode }}"
                                     href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
                                     <div class="msg-header"> {{ $properties['native'] }}
                                         <p class="msg-header-title ms-auto">
-                                        <p class="msg-header-clear ms-auto">
-                                            @if ($localeCode == 'ar')
-                                                <i class="flag-icon flag-icon-eg"></i>
-                                            @else
-                                                <i class="flag-icon flag-icon-us"></i>
-                                            @endif
-                                        </p>
+                                            <p class="msg-header-clear ms-auto">
+                                                @if ($localeCode == 'ar')
+                                                    <i class="flag-icon flag-icon-eg"></i>
+                                                @else
+                                                    <i class="flag-icon flag-icon-us"></i>
+                                                @endif
+                                            </p>
                                         </p>
 
                                     </div>
@@ -68,7 +64,7 @@
             <div class="user-box dropdown">
                 <a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#"
                     role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="{{ asset('admin/assets/images/avatars/avatar-2.png') }}" class="user-img"
+                    <img src="{{ asset('admin_dashboard/assets/images/avatars/avatar-2.png') }}" class="user-img"
                         alt="user avatar">
                     <div class="user-info ps-3">
                         <p class="user-name mb-0">{{ auth()->user()->name }}</p>
