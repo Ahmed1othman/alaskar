@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
 
        DB::table('users')->delete();
        User::create([
-           'name' => 'awazelalaskar Admin'
+           'name' => 'Awazel Alaskar Admin'
            ,'email' => 'admin@awazelalaskar.com'
            ,'password' => Hash::make('awazelalaskar_2023')
        ]);
