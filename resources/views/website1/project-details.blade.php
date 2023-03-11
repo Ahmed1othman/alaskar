@@ -35,7 +35,7 @@
                    <div class="blog-text">
                        <h2>{{$row->title}}</h2>
                        <p>
-                           {{$row->notes}}
+                           {!!$row->notes!!}
                        </p>
                    </div>
                </div>

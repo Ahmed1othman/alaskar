@@ -151,88 +151,7 @@
     </section>
     <!-- Service Area End -->
 
-    <!-- Faq Area -->
-    {{-- <div class="faq-area pt-100 pb-70">
-        <div class="container-fluid">
-            <div class="row align-items-center"
-                <div class="col-lg-12 col-xxl-12">
-                    <div class="align-items-center text-center faq-content">
-                        <span>Why Choose Us</span>
-                        <h2>We Are Top Ranked & Dedicated SEO Company</h2>
-                        <p>
-                            As opposed to using Content here, content here,
-                            making it look like readable English. Many desktop
-                            publishing packages and web page editors now use Lorem
-                            Ipsum as their default model text.
-                        </p>
-                    </div>
-
-                    <div class="faq-accordion">
-                        <ul class="accordion">
-                            <li class="accordion-item">
-                                <a class="accordion-title" href="javascript:void(0)">
-                                    <i class='bx bx-chevron-down'></i>
-                                    Great Research Exparts
-                                </a>
-
-                                <div class="accordion-content">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipis
-                                        cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    </p>
-                                </div>
-                            </li>
-
-                            <li class="accordion-item">
-                                <a class="accordion-title" href="javascript:void(0)">
-                                    <i class='bx bx-chevron-down'></i>
-                                    Great Understanding
-                                </a>
-
-                                <div class="accordion-content">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipis
-                                        cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    </p>
-                                </div>
-                            </li>
-
-                            <li class="accordion-item">
-                                <a class="accordion-title" href="javascript:void(0)">
-                                    <i class='bx bx-chevron-down'></i>
-                                    Top Ranking
-                                </a>
-
-                                <div class="accordion-content">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipis
-                                        cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    </p>
-                                </div>
-                            </li>
-
-                            <li class="accordion-item">
-                                <a class="accordion-title active" href="javascript:void(0)">
-                                    <i class='bx bx-chevron-down'></i>
-                                    100% Trusted
-                                </a>
-
-                                <div class="accordion-content show">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipis
-                                        cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-    <!-- Faq Area End -->
-
-    <!-- Portfolio Area -->
+    <!-- projects Area -->
     <section class="portfolio-area pt-100 pb-70 {{ showSection_hlp('projects') }}">
         <div class="container">
             <div class="section-title text-center">
@@ -242,18 +161,18 @@
                     {{websiteInfo_hlp('service_pragraph_'.app()->getLocale())}}
                 </p>
             </div>
-            <div class="portfolio-slider pt-45 owl-carousel owl-theme">
+            <div class="portfolio-slider pt-45 owl-carousel owl-rtl owl-theme">
                 @foreach($projects as $project)
                 <div class="portfolio-item">
                     <div class="portfolio-img">
-                        <a href="portfolio.html" >
+                        <a href="{{route('project.details',$project->id)}}" >
                            <img src="{{asset($project->image)}}" style="width: 510px;height: 445px;" alt="Portfolio Images">
                         </a>
                         <div class="portfolio-tag">
-                            <a href="#"><span>{{__('site/app.read_more')}}</span></a>
+                            <a href="{{route('project.details',$project->id)}}"><span>{{__('site/app.read_more')}}</span></a>
                         </div>
                         <div class="portfolio-content">
-                            <a href="portfolio.html"><h3>{{$project->title}}</h3></a>
+                            <a href="{{route('project.details',$project->id)}}"><h3>{{$project->title}}</h3></a>
                             <i class='bx bxs-chevron-right'></i>
                         </div>
                     </div>
@@ -262,7 +181,7 @@
             </div>
         </div>
     </section>
-    <!-- Portfolio Area End -->
+    <!-- projects Area End -->
 
     <!-- Submission Area -->
     <div class="submission-area ptb-100 {{ showSection_hlp('subscritoin') }}">
@@ -292,311 +211,6 @@
         </div>
     </div>
     <!-- Submission Area End -->
-
-    <!-- Price Area -->
-    {{-- <div class="price-area pt-100 pb-70">
-        <div class="container">
-            <div class="section-title text-center">
-                <span>Pricing Table</span>
-                <h2>We Have Pre-ready Pricing for Our Services</h2>
-                <p>
-                    It is a long established fact that a reader will be
-                    distracted by the readable content of a page when looking at its layout.
-                </p>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 pt-45">
-                    <div class="tabs-item-list">
-                        <ul id="tabs-item" class="text-center">
-                            <li class="active">
-                                <a href="#monthly" class="prices-tab">Monthly</a>
-                            </li>
-                            <li>
-                                <a href="#yearly" class="prices-tab">Yearly</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div id="prices-content">
-                <div id="monthly" class="active prices-content-area animated">
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single-price">
-                                <span>Basic Plan</span>
-                                <div class="single-price-title">
-                                    <h2><sup>$</sup>30<sub>/month</sub></h2>
-                                </div>
-                                <ul>
-                                    <li>Data Analysis</li>
-                                    <li>Website Building</li>
-                                    <li>Web Application</li>
-                                    <li class="color-gray">SEO Optimizing</li>
-                                    <li class="color-gray">Content Marketing</li>
-                                    <li class="color-gray">Social Marketing</li>
-                                </ul>
-                                <a href="#" class="get-btn">Get Stated</a>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single-price current">
-                                <span>Standard Plan</span>
-                                <div class="single-price-title">
-                                    <h2><sup>$</sup>60<sub>/month</sub></h2>
-                                </div>
-                                <ul>
-                                    <li>Data Analysis</li>
-                                    <li>Website Building</li>
-                                    <li>Web Application</li>
-                                    <li>SEO Optimizing</li>
-                                    <li class="color-gray">Content Marketing</li>
-                                    <li class="color-gray">Social Marketing</li>
-                                </ul>
-                                <a href="#" class="get-btn">Get Stated</a>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-sm-6 offset-sm-3 offset-lg-0">
-                            <div class="single-price">
-                                <span>Premium Plan</span>
-                                <div class="single-price-title">
-                                    <h2><sup>$</sup>90<sub>/month</sub></h2>
-                                </div>
-                                <ul>
-                                    <li>Data Analysis</li>
-                                    <li>Website Building</li>
-                                    <li>Web Application</li>
-                                    <li>SEO Optimizing</li>
-                                    <li>Content Marketing</li>
-                                    <li>Social Marketing</li>
-                                </ul>
-                                <a href="#" class="get-btn">Get Stated</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="yearly" class="animated prices-content-area">
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single-price">
-                                <span>Basic Plan</span>
-                                <div class="single-price-title">
-                                    <h2><sup>$</sup>70<sub>/Year</sub></h2>
-                                </div>
-                                <ul>
-                                    <li>Data Analysis</li>
-                                    <li>Website Building</li>
-                                    <li>Web Application</li>
-                                    <li class="color-gray">SEO Optimizing</li>
-                                    <li class="color-gray">Content Marketing</li>
-                                    <li class="color-gray">Social Marketing</li>
-                                </ul>
-                                <a href="#" class="get-btn">Get Stated</a>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single-price current">
-                                <span>Standard Plan</span>
-                                <div class="single-price-title">
-                                    <h2><sup>$</sup>120<sub>/Year</sub></h2>
-                                </div>
-                                <ul>
-                                    <li>Data Analysis</li>
-                                    <li>Website Building</li>
-                                    <li>Web Application</li>
-                                    <li>SEO Optimizing</li>
-                                    <li class="color-gray">Content Marketing</li>
-                                    <li class="color-gray">Social Marketing</li>
-                                </ul>
-                                <a href="#" class="get-btn">Get Stated</a>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-sm-6 offset-sm-3 offset-lg-0">
-                            <div class="single-price">
-                                <span>Premium Plan</span>
-                                <div class="single-price-title">
-                                    <h2><sup>$</sup>170<sub>/Year</sub></h2>
-                                </div>
-                                <ul>
-                                    <li>Data Analysis</li>
-                                    <li>Website Building</li>
-                                    <li>Web Application</li>
-                                    <li>SEO Optimizing</li>
-                                    <li>Content Marketing</li>
-                                    <li>Social Marketing</li>
-                                </ul>
-                                <a href="#" class="get-btn">Get Stated</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-    <!-- Price Area End -->
-
-    <!-- Member Area -->
-    {{-- <div class="member-area pb-70 pt-70">
-        <div class="container">
-            <div class="section-title text-center">
-                <span>مجلس الادارة</span>
-                <h2>معًا ، نسعى لتحقيق رؤية المملكة العربية السعودية 2030.</h2>
-                <p>
-                    نسعي معا لتحقيق افضل واحسن الخدمات وبأفضل جودة ممكنة وموجودة بجميع انحاء المملكة العربية السعودية ونرجو دائما رضاء عملائنا الكرام
-                </p>
-            </div>
-            <div class="row pt-45">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="member-card">
-                        <div class="member-img">
-                            <a href="members.html">
-                               <img src="{{asset('website1/img/member/1.jpg')}}" alt="Member Images">
-                            </a>
-                            <div class="member-content">
-                                <a href="members.html">
-                                    <h3>John Doe</h3>
-                                </a>
-                                <span>Head of Bonsa</span>
-                                <div class="social-icon">
-                                    <ul>
-                                        <li>
-                                            <a href="#" target="_blank" >
-                                                <i class='bx bxl-facebook'></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" target="_blank" >
-                                                <i class='bx bxl-twitter' ></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" target="_blank" >
-                                                <i class='bx bxl-instagram' ></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6">
-                    <div class="member-card">
-                        <div class="member-img">
-                            <a href="members.html">
-                               <img src="{{asset('website1/img/member/2.jpg')}}" alt="Member Images">
-                            </a>
-                            <div class="member-content">
-                                <a href="members.html">
-                                    <h3>John Smith</h3>
-                                </a>
-                                <span>SEO Expert</span>
-                                <div class="social-icon">
-                                    <ul>
-                                        <li>
-                                            <a href="#" target="_blank" >
-                                                <i class='bx bxl-facebook'></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" target="_blank" >
-                                                <i class='bx bxl-twitter' ></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" target="_blank" >
-                                                <i class='bx bxl-instagram' ></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6">
-                    <div class="member-card">
-                        <div class="member-img">
-                            <a href="members.html">
-                               <img src="{{asset('website1/img/member/3.jpg')}}" alt="Member Images">
-                            </a>
-                            <div class="member-content">
-                                <a href="members.html">
-                                    <h3>Evanaa</h3>
-                                </a>
-                                <span>Content Writer</span>
-                                <div class="social-icon">
-                                    <ul>
-                                        <li>
-                                            <a href="#" target="_blank" >
-                                                <i class='bx bxl-facebook'></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" target="_blank" >
-                                                <i class='bx bxl-twitter' ></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" target="_blank" >
-                                                <i class='bx bxl-instagram' ></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6">
-                    <div class="member-card">
-                        <div class="member-img">
-                            <a href="members.html">
-                               <img src="{{asset('website1/img/member/4.jpg')}}" alt="Member Images">
-                            </a>
-                            <div class="member-content">
-                                <a href="members.html">
-                                    <h3>Knot Doe</h3>
-                                </a>
-                                <span>Marketing Expert</span>
-                                <div class="social-icon">
-                                    <ul>
-                                        <li>
-                                            <a href="#" target="_blank" >
-                                                <i class='bx bxl-facebook'></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" target="_blank" >
-                                                <i class='bx bxl-twitter' ></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" target="_blank" >
-                                                <i class='bx bxl-instagram' ></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="member-shape">
-           <img src="{{asset('website1/img/shape/member-shape-1.png')}}" alt="Shape">
-        </div>
-    </div> --}}
-    <!-- Member Area End -->
 
     <!-- Counter Area -->
     <div class="counter-area pt-100 pb-70 {{ showSection_hlp('statistics') }}">
@@ -713,7 +327,7 @@
                     <div class="blog-card">
                         <div class="blog-img">
                             <a href="blog-details.html">
-                               <img src="{{asset($new->image)}}" alt="Blog Images" style="height: 415px; width: 510">
+                               <img src="{{asset($new->image)}}" alt="Blog Images" style="height: 415px; width: 510px">
                             </a>
                         </div>
                         <div class="blog-content">

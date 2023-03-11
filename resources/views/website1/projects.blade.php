@@ -43,7 +43,7 @@
                                 <h3>{{$project->title}}</h3>
                             </a>
                             <p>
-                                {{Str::limit($project->notes,200,'...')}}
+                                {!! Str::limit($project->notes,200,'...') !!}
                             </p>
                         </div>
                     </div>
